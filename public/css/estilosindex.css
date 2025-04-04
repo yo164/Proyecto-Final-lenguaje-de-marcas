@@ -1,7 +1,27 @@
+
+
 header{
     background-color: black;
     padding: 20px;
-    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header h1{
+    color: bisque;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logoTienda {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: aqua;
 }
 
 
