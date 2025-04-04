@@ -4,6 +4,8 @@
 
 
 footer {
+    font-family: monospace;
+    padding: 10px;
     text-align: center;
     background-color: black;
     color: white;
