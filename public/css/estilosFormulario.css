@@ -14,3 +14,12 @@ fieldset{
     gap: 6px;
 }
 
+label{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    padding: 4px;
+}
+
