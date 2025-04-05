@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/estilosFormulario.css">
+</head>
+<body>
+    <header>
+        añadir el header principal 
+    </header>
+    <main>
+        <form method="post">
+            <fieldset>
+                <legend>
+                    Formulario de Registro
+    
+                </legend>
+
+                <label>Nombre: 
+                    <input 
+                    type="text" 
+                    id="name" 
+                    name="name"
+                    placeholder="Escribe aquí tu nombre"
+                    >
+                </label>
+                <br>
+                <label>Primer apellido:
+                    <input type="text"
+                    id="apellido1"
+                    name="apellido1"
+                    placeholder="Escribe aquí tu primer apellido"
+                    >
+                </label>
+                <br>
+                <label>Segundo apellido:
+                    <input type="text"
+                    id="apelido2"
+                    name="apellido2"
+                    placeholder="Escribe aquí tu segundo apellido">
+                </label>
+                <br>
+                <label>Teléfono:
+                    <input type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder="Escribe aquí tu número de teléfono"
+                    required pattern="[0-9]{9}"
+                    >
+                </label>
+                <br>
+                <label>Email:
+                    <input type="email"
+                    id="mail"
+                    name="mail"
+                    placeholder="Escribe aquí tu número de teléfono"
+                    >
+                    <br>
+                    <fieldset id="direccion">
+                        <legend>Dirección:
+
+                        </legend>
+                        <br>
+                        <label>Tipo de Via:
+                            <select name="tipoVia" id="tipoVia">
+                                <option 
+                                value="Calle"
+                                >Calle
+                                </option>
+                                <option 
+                                value="Avenida"
+                                >Avenida
+                            </option>
+                            </select>
+                        </label>
+                    </fieldset>
+                </label>
+
+            </fieldset>
+            
+         
+        </form>
+    </main>
+    <footer>
+        no se si mantener el footer de la principal o anularlo
+    </footer>
+
+
+</body>
+</html>

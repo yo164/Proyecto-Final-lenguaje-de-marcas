@@ -1,0 +1,16 @@
+body{
+    background-color: whitesmoke;
+}
+
+form{
+    background-color: rgb(206, 255, 239);
+    width: 33%;
+    
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
