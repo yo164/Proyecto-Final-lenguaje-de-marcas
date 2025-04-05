@@ -57,6 +57,7 @@
                     name="mail"
                     placeholder="Escribe aquí tu número de teléfono"
                     >
+                </label>
                     <br>
                     <fieldset id="direccion">
                         <legend>Dirección:
@@ -66,19 +67,69 @@
                         <label>Tipo de Via:
                             <select name="tipoVia" id="tipoVia">
                                 <option 
-                                value="Calle"
+                                    value="Calle"
                                 >Calle
                                 </option>
                                 <option 
-                                value="Avenida"
+                                    value="Avenida"
                                 >Avenida
-                            </option>
+                                </option>
+                                <option 
+                                    value="Plaza"
+                                >Plaza
+                                </option>
+                                <option 
+                                    value="Boulevard"
+                                >Boulevard
+                                </option>
+                                <option 
+                                    value="Placeta"
+                                >Placeta
+                                </option>
+                                <option     
+                                    value="Paseo"
+                                >Paseo
+                                </option>
+                                <option 
+                                    value="Camino"
+                                >Camino
+                                </option>
                             </select>
                         </label>
+                        <br>
+                        <label>Nombre de la vía:
+                            <input type="text" id="nombreVia" name="nombreVia" placeholder="Escriba aquí el nombre de la vía">
+                        </label>
+                        
+                        <label>Número de escalera:
+                            <input type="text" id="numeroEscalera" name="numeroEscalera" placeholder="Escriba el número de la escalera">
+                        </label>
+                        
+                        <label>Piso:
+                            <input type="text" id="piso" name="piso" placeholder="Escriba el piso">
+                        </label>
+                        
+                        <label>Puerta:
+                            <input type="text" id="puerta" name="puerta" placeholder="Escriba la puerta">
+                        </label>
+                        
+                        <label>Población:
+                            <input type="text" id="poblacion" name="poblacion" placeholder="Escriba la población">
+                        </label>
+                        
+                        <label>Provincia:
+                            <input type="text" id="provincia" name="provincia" placeholder="Escriba la provincia">
+                        </label>
+                        
+                        <label>Código Postal:
+                            <input type="text" id="codigoPostal" name="codigoPostal" placeholder="Escriba el código postal">
+                        </label>
+                        
                     </fieldset>
-                </label>
+                
 
             </fieldset>
+            <button type="submit">Submit</button>
             
          
         </form>
