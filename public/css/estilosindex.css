@@ -52,7 +52,33 @@ aside{
     background-color: chocolate;
     width: 100%;
     height: 200px;
+    padding: 10px 0;
+    overflow: hidden;
 }
+
+.carrusel-contenedor{
+    background-color: aqua;
+    display: flex;
+    gap: 30px;
+    animation: deslizar 20s linear infinite;
+}
+
+.item{
+    min-width: 250px;
+    height: 180px;
+    background-color: darkorchid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 9px;
+}
+
+@keyframes deslizar {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
 footer {
     font-family: monospace;
     padding: 10px;
