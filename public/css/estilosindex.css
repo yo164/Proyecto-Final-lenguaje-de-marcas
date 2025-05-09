@@ -26,10 +26,17 @@ header h1{
 
 
 main{
-    background-color:aquamarine ;
+    height: 100vh;
     display:flex;
+    flex-direction: column;
+}
+
+.partearriba{
+    background-color: chartreuse;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    height: 66.6%;
 }
 
 aside{
@@ -51,21 +58,16 @@ aside{
 .bandaofertas{
     background-color: chocolate;
     width: 100%;
-    height: 20vh;
-    display: flex;
-    flex-direction: column;
-    padding: 10px 0;
-    overflow: hidden;
-}
-
-.carrusel-contenedor{
+    height: 33.3%;
     position: relative;
-    background-color: aqua;
     overflow: hidden;
-    z-index: 1000 ;
+    z-index: 1000;
+      display: flex; /* Asegura que sus hijos se alineen bien */
+    align-items: center;
+    justify-content: center;
 }
 
-.item {
+.bandaofertas div {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -73,37 +75,17 @@ aside{
     top: 0;
     left: 0;
     opacity: 0;
-    animation: fadeCarrusel 12s infinite;
+    animation: fadeCarousel 12s infinite;
     transition: opacity 1s ease-in-out;
+    background-size: cover;
 }
-
-.item{
-    flex: 0 0 auto;
-    min-width: 200px;
-    height: 180px;
-    background-color: darkorchid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    border-radius: 9px;
-}
-
-.item:nth-child(1) { animation-delay: 0s;}
-.item:nth-child(2) { animation-delay: 4s;}
-.item:nth-child(3) { animation-delay: 8s;}
-
-@keyframes fadeCarrusel {
-    0% , 100%{ 
-        opacity: 0;
-    }
-    10%, 30% {
-        opacity: 1;
-    }
-    40%, 30% {
-        opacity: 0;
-    }
-    
+.bandaofertas div:nth-child(1) { animation-delay: 0s; background-color: black;}
+.bandaofertas div:nth-child(2) { animation-delay: 4s; background-color: white}
+.bandaofertas div:nth-child(3) { animation-delay: 8s; background-color: pink}
+@keyframes fadeCarousel {
+        0%, 100% { opacity: 0; }
+        10%, 30% { opacity: 1; }
+        40%, 90% { opacity: 0; }
 }
 
 
