@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/estilosFormulario.css">
+</head>
+<body>
+    <header>
+        añadir el header principal 
+    </header>
+    <main>
+        <form method="post">
+            <fieldset>
+                <legend>
+                    Formulario de Registro
+    
+                </legend>
+
+                <label>Nombre: 
+                    <input 
+                    type="text" 
+                    id="name" 
+                    name="name"
+                    placeholder="Escribe aquí tu nombre"
+                    required
+                    >
+                </label>
+                <br>
+                <label>Primer apellido:
+                    <input type="text"
+                    id="apellido1"
+                    name="apellido1"
+                    placeholder="Escribe aquí tu primer apellido"
+                    required
+                    >
+                </label>
+                <br>
+                <label>Segundo apellido:
+                    <input type="text"
+                    id="apelido2"
+                    name="apellido2"
+                    placeholder="Escribe aquí tu segundo apellido"
+                    required
+                    >
+                </label>
+                <br>
+                <label>Teléfono:
+                    <input type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder="Escribe aquí tu número de teléfono"
+                    required pattern="[0-9]{9}"
+                    
+                    >
+                </label>
+                <br>
+                <label>Email:
+                    <input type="email"
+                    id="mail"
+                    name="mail"
+                    placeholder="Escribe aquí tu número de teléfono"
+                    required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+                    >
+                </label>
+                    <br>
+                    <fieldset id="direccion">
+                        <legend>Dirección:
+
+                        </legend>
+                        <br>
+                        <label>Tipo de Via:
+                            <select name="tipoVia" id="tipoVia" required>
+                                <option 
+                                    value="Calle"
+                                >Calle
+                                </option>
+                                <option 
+                                    value="Avenida"
+                                >Avenida
+                                </option>
+                                <option 
+                                    value="Plaza"
+                                >Plaza
+                                </option>
+                                <option 
+                                    value="Boulevard"
+                                >Boulevard
+                                </option>
+                                <option 
+                                    value="Placeta"
+                                >Placeta
+                                </option>
+                                <option     
+                                    value="Paseo"
+                                >Paseo
+                                </option>
+                                <option 
+                                    value="Camino"
+                                >Camino
+                                </option>
+                            </select>
+                        </label>
+                        <br>
+                        <label>Nombre de la vía:
+                            <input type="text" id="nombreVia" name="nombreVia" placeholder="Escriba aquí el nombre de la vía" required
+                            >
+                        </label>
+                        
+                        <label>Número de escalera:
+                            <input 
+                            type="text" 
+                            id="numeroEscalera" 
+                            name="numeroEscalera" 
+                            placeholder="Escriba el número de la escalera"
+                            required
+                            >
+                        </label>
+                        
+                        <label>Piso:
+                            <input type="text" id="piso" name="piso" placeholder="Escriba el piso" required>
+                        </label>
+                        
+                        <label>Puerta:
+                            <input type="text" id="puerta" name="puerta" placeholder="Escriba la puerta" required>
+                        </label>
+                        
+                        <label>Población:
+                            <input type="text" id="poblacion" name="poblacion" placeholder="Escriba la población" required>
+                        </label>
+                        
+                        <label>Provincia:
+                            <input type="text" id="provincia" name="provincia" placeholder="Escriba la provincia"required>
+                        </label>
+                        
+                        <label>Código Postal:
+                            <input type="text" id="codigoPostal" name="codigoPostal" placeholder="Escriba el código postal" required>
+                        </label>
+                        
+                    </fieldset>
+                    <p><Strong>* Campo obligatorio</Strong></p>
+                
+
+            </fieldset>
+            <button type="submit"><p>Submit</p></button>
+            
+         
+        </form>
+    </main>
+    
+
+
+
+</body>
+</html>

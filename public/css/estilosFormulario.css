@@ -1,0 +1,79 @@
+body{
+    background-color: whitesmoke;
+}
+
+form{
+    background: linear-gradient(-45deg, #131b11, #9fb64c, #b6d377, #f9ffe8);
+    background-size: 400% 400%;
+    animation: gradientBG 7s ease infinite;
+    padding: 60px 0;
+    
+    max-width: 600px;    
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%; }
+    50% {background-position: 100% 50%; }
+    100% { background-position: 0% 50% }
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-radius:5px;
+    border-color: #435201;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+input, select{
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 3px;
+    box-shadow: rgba(0,0,0,0.4);
+
+}
+
+
+button{
+    font-weight: bold;
+    margin-left: 200px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 50px;
+    border-radius:7px;
+    background: linear-gradient(-35deg, #516310, #778d13, #a8b909, #fefff5);
+    box-shadow: 0 0 20px rgba(70, 107, 0, 0.8);
+    font-size: 18px;
+    
+    border: none;
+    transition: background-position 0.8s ease;
+    background-size: 200% 100%;
+    background-position: left center;
+
+}
+
+button:hover {
+    background-position: right center;
+    color:#bbb;
+}
+
+button p{
+    color:#435201;
+    transition: background-position 0.8s ease;
+    background-size: 200% 150%;
+    background-position: right center;
+    
+}
+
+button p:hover{
+    color: #c2ff52;
+    background-position: left center;
+}
+
+
