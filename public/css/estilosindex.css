@@ -38,7 +38,8 @@ main{
 }
 
 aside{
-    background-color: blueviolet;
+    
+    
     width:20%;
     display: flex;
     align-items: center;
@@ -51,7 +52,7 @@ aside nav{
     flex-direction: column;
     gap: 2em;
     padding-block: 2em;
-    background-color: red;
+    background-color: rgba(159, 143, 189, 0.6);
     
 }
 
