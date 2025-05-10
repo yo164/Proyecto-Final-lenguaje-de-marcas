@@ -32,35 +32,36 @@ main{
 }
 
 .partearriba{
-    background-color: chartreuse;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     height: 66.6%;
 }
 
 aside{
     background-color: blueviolet;
-    width:18%;
+    width:20%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 36px;
+    justify-content: right;
+    font-size: 1.8vw;
 }
 
 aside nav{
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    padding-block: 25px;
+    gap: 2em;
+    padding-block: 2em;
     background-color: red;
+    
 }
 
 aside nav a{
     color: white;
     text-decoration: none;
     padding-right: 5px;
-    margin-right: 15px;
+    font-size: 1em;
+    
+    
 }
 
 aside nav a:hover{
@@ -70,6 +71,11 @@ aside nav a:hover{
 .principal{
     background-color:burlywood ;
     width: 80%;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -111,21 +117,32 @@ aside nav a:hover{
 .desplegable{
     position: absolute;
     top: 0;
-    left: 100%;
-    
-    padding: 10px;
-    width: 200px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
     border-radius: 5px;
+    border-width: 10px;
+    border-style: hidden;
+    box-sizing: border-box;
 }
 
 .desplegable nav {
-background-color: rgba(255, 255, 255, 0.2);
-display: flex;
-flex-direction: column;
-gap: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    height: 100%;
+    width: 100%;
+
 }
 
 .desplegable a {
