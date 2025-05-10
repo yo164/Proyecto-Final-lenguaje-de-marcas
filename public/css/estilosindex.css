@@ -75,12 +75,53 @@ aside nav a:hover{
     position: relative;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
+.intro{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.masvendidos{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(141, 55, 55);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
 
+.productos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    height: 50%;
+}
+
+.articulo{
+    background-color: #f5f5f5;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #38bd0f;
+    text-align: center;
+    box-sizing: border-box;
+    height: auto;
+    max-height: 100%;
+    overflow: hidden;
+}
 
 .bandaofertas{
     background-color: chocolate;
@@ -155,6 +196,45 @@ aside nav a:hover{
 .desplegable a:hover {
     color: aqua;
 }
+
+
+.presentacion{
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.videopresentacion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.contenidopresentacion {
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.filosofia{
+    background-color: white;
+    color: #111;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+
+
 
 footer {
     font-family: monospace;
