@@ -18,17 +18,35 @@ h1 {
 
 .articulo {
         box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
-        padding: 7px;
+        padding: 10px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 4em;
 
 }
 
+.articulo > div:last-child{
+    display: flex;
+    align-items: center;
+    gap: 4em;
+    justify-content: right;
+    padding-right: 5px;
+}
 
 .imgpapelera{
     width: 15px;
     height: 18px;
+}
+
+.parteAbajo{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-top: 20px;
+    margin-right: 115px;
+    gap: 6.5em;
+    padding-bottom: 20px;
 }
 
 .finalizar {
@@ -36,6 +54,6 @@ h1 {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
     color: white;
     padding: 10px;
-    margin-left: 75vw;
-    margin-top: 20px;
+    
+    
 }
