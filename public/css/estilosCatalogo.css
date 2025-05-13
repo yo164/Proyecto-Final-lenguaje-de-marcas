@@ -1,0 +1,45 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.catalogo{
+    background-color: aquamarine;
+    padding-top: 36px;
+    text-align: center;
+   height: auto;
+   overflow-y: scroll;
+    flex: 1;
+
+}
+
+.catalogo h2{
+    color: rgb(252, 163, 54);
+    margin-top: 16px;
+    margin-bottom: 36px;
+    font-size: 36px;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+    padding-bottom: 1.5em;
+    padding-inline: 1.5em;
+}
+
+.contenedorProducto {
+    background-color: blueviolet;
+    box-sizing: border-box;
+    box-shadow: 3px 5px 20px 4px rgba(0, 0, 0, 0.85);
+    border-radius: 3px;
+    height: 400px;
+    
+}

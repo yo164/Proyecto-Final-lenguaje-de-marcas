@@ -1,5 +1,6 @@
 const links = document.querySelectorAll('.enlaces');
 const principal = document.getElementById('principal');
+const titulovideo = document.getElementById('tituloPresentacion');
 
 let menuDesplegable = null;
 
@@ -26,24 +27,32 @@ links.forEach(link => {
         principal.appendChild(submenu);
 
         menuDesplegable = submenu;
+                titulovideo.style.display = 'none';
+
     });
 
     link.addEventListener('mouseleave', () => {
         console.log('desfocused', link.textContent);
-
+        
+        
         const submenu = principal.querySelector('.desplegable');
         if(submenu && !submenu.contains(event.relatedTarget)) {
             submenu.remove();
             menuDesplegable = null;
+             titulovideo.style.display = '';
         }
     });
-
+    
     principal.addEventListener('mouseleave', (event) => {
+        
         if (menuDesplegable && !menuDesplegable.contains(event.relatedTarget)) {
             menuDesplegable.remove();
             menuDesplegable = null;
+             titulovideo.style.display = '';
         }
     });
+
+ 
 });
 
 
