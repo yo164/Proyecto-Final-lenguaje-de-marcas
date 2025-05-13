@@ -1,0 +1,41 @@
+body{
+    height: 100vh;
+    margin: 0;
+}
+
+.carrito{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+    padding: 3em;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+.articulo {
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+        padding: 7px;
+        display: flex;
+        align-items: center;
+        gap: 4em;
+
+}
+
+
+.imgpapelera{
+    width: 15px;
+    height: 18px;
+}
+
+.finalizar {
+    background-color: black;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 10px;
+    margin-left: 75vw;
+    margin-top: 20px;
+}
