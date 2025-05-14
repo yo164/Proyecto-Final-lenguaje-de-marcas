@@ -86,6 +86,30 @@ function inicializarEventosCarrito(producto) {
             actualizarTotalProducto(producto, parseInt(cantidadInput.value));
         }
     });
+    
+    //eliminar producto
+    //Elimina el producto del arrito cuando el usuario hace click en el boton eliminar
+    document.querySelector(`.eliminar[data-id="${producto.id}"]`).addEventListener('click', function () {
+        //llamada a la función de eliminar producto
+        eliminarProductoDelCarrito(producto.id);
+    });
 }
 
 //funcion para actualizar el total del producto
+function actualizarTotalProducto(producto, cantidad) {
+    const total = producto.precio*cantidad;
+    //actualiza el texto del total
+    document.querySelector(`#total${producto.id}`).textContent = total.toFixed(2);
+}
+
+//función para eliminar un producto del carrito
+function eliminarProductoDelCarrito(id) {
+    //encuentra el div del producto
+    const productoDiv = document.querySelector(`.articulo[data-id="${id}"]`);
+    //elimina el div del carrito
+    productoDiv.remove();
+}
+
+//quedan los botones de agregar al carrito pero 
+// eso creo que deberia ponerlo en 
+//otro archivo 
