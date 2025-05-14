@@ -1,75 +1,69 @@
 const { parse } = require("path");
 
-//simulacion de base de datos
-const productos = [
-    { id: 1, nombre: "Articulo 1", precio: 10.00, stockMaximo: 10 },
-    { id: 2, nombre: "Articulo 2", precio: 15.00, stockMaximo: 5 },
-    { id: 3, nombre: "Articulo 3", precio: 20.00, stockMaximo: 8 }
-];
 
 
-//funcion para agregar productos al carrito
-function agregarAlcarrito(id, cantidadSelecionada = 1) {//cantidad selecionada como ejemplo aqui iria la variable que capture el valor del input del botón
-    //buscar el producto seleccionado en nuestar "base de datos"
-    const productoSeleccionado = productos.find(producto => producto.id === id);
+//funcion para cargar los productos del carrito y mostrarlos en la pagina del carrito
+function cargarCarrito() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const carritoContainer = document.querySelector('.carrito');
 
-    //si el producto existe, lo agregamos al carrito
-    if (productoSeleccionado) {
-        //Creamos la estructura HTML para el producto en el carrito
-        //nuevo div para el articulo
+
+
+
+
+    carrito.forEach(producto => {
         const articuloDiv = document.createElement('div');
-        //agregar la clase'articulo para los estilos
         articuloDiv.classList.add('articulo');
-        //usamos data-id para identificar el producto
-        articuloDiv.setAttribute('data-id', productoSeleccionado.id);
+        articuloDiv.setAttribute('data-id', producto.id);
 
         //html del producto con la cantidad selecionada y el precio calculado
         articuloDiv.innerHTML = `
-    <div class="nombre">${productoSeleccionado.nombre}</div>
+    <div class="nombre">${producto.nombre}</div>
     <div>
-        <div class="precio" id="precio">${productoSeleccionado.precio}</div>
+        <div class="precio" id="precio">${producto.precio.toFixed(2)}</div>
         <div class="cantidad" id="cantidad">
             <button class="menos">-</button>
-            <input type="number" value="${cantidadSelecionada}" min="1" max="${productoSeleccionado.stockMaximo}" data-id="${productoSeleccionado.id}">
+            <input type="number" value="${producto.cantidad}" min="1" max="${producto.stockMaximo}" data-id="${productoSeleccionado.id}">
             <button class="mas">+</button>
         </div>
-        <div class="total" id="total${productoSeleccionado.id}">${productoSeleccionado.precio}</div>
+        <div class="total" id="total${producto.id}">${(producto.precio * producto.cantidad).toFixed(2)}</div>
         <div class="botonEliminar">
-            <button class="eliminar" data-id="${productoSeleccionado.id}">
+            <button class="eliminar" data-id="${producto.id}">
                 <img src="/papelera.png" alt="Eliminar" class="imgpapelera">
             </button>
         </div>
     </div>
 `;
 
-//añadimos el nuevo producto al carrito (al contenedor de productos(.articulo))
-document.querySelector('.carrito').appendChild(articuloDiv);
-    }
+        //agregamos el articulo al contenedor del carrito
+        carritoContainer.appendChild(articuloDiv);
 
-    //agregar eventos de cantidad y eliminacion
-    inicializarEventosCarrito(productoSeleccionado);
+        //inicializar los eventos ventos de cantidad y eliminacion
+        inicializarEventosCarrito(producto);
+    });
+
 }
 
 //funcion para inicializar los eventos del producto (más, menos y eliminar)
 function inicializarEventosCarrito(producto) {
-    //incrementar cantidad
     //Escucha el cambio de cantidad cuando el usuario modifica el input de cantidad
-    document.querySelector(`#cantidad input[data-id="${producto.id}"]`).addEventListener('input', function() {
+    document.querySelector(`#cantidad input[data-id="${producto.id}"]`).addEventListener('input', function () {
         const cantidad = parseInt(this.value);// captura la nueva cantidad
         actualizarTotalProducto(producto, cantidad);//Actualiza el total del producto
+        actualizarCarrito(producto.id, cantidad);//actualizar el carrito en el LocalStorage
     });
 
     //boton menos
-    //Decrementa la cantidad cuando el usuario presiona el boton "menós"
-    document.querySelector(`.menos[data-id="${producto.id}"]`).addEventListener('click', function() {
+    //Decrementa la cantidad cuando el usuario presiona el boton "menos"
+    document.querySelector(`.menos[data-id="${producto.id}"]`).addEventListener('click', function () {
         const cantidadInput = document.querySelector(`#cantidad input[data-id="${producto.id}"]`);//captura el input de cantidad
         //asegura que la cantidad no sea menor que 1
-        if(parseInt(cantidadInput.value)> 1) {
+        if (parseInt(cantidadInput.value) > 1) {
             //disminuimos la cantidadd
             cantidadInput.value = parseInt(cantidadInput) - 1;
             //actualiza el total del valor de los productos
             actualizarTotalProducto(producto, parseInt(cantidadInput.value));
-
+            actualizarCarrito(producto.id, parseInt(cantidadInput.value));//actualizar el carrito en el localStorage
         }
     });
 
@@ -78,17 +72,19 @@ function inicializarEventosCarrito(producto) {
     document.querySelector(`.mas[data-id="${producto.id}"]`).addEventListener('click', function () {
         //captura input de cantidad
         const cantidadInput = document.querySelector(`#cantidad input[data-id="${producto.id}"]`);
-        if(parseInt(cantidadInput.value) < producto.stockMaximo) {
+        if (parseInt(cantidadInput.value) < producto.stockMaximo) {
             //nos aseguramosde que no excedemos el stock maximo
             // y aumentamos en 1 el valor del input
             cantidadInput.value = parseInt(cantidadInput.value) + 1;
             //actualizamos el toatl del valor de la linea
             actualizarTotalProducto(producto, parseInt(cantidadInput.value));
+            //actualizamos el carrito en el localStorage
+            actualizarCarrito(producto.id, parseInt(cantidadInput.value));
         }
     });
-    
+
     //eliminar producto
-    //Elimina el producto del arrito cuando el usuario hace click en el boton eliminar
+    //Elimina el producto del carrito cuando el usuario hace click en el boton eliminar
     document.querySelector(`.eliminar[data-id="${producto.id}"]`).addEventListener('click', function () {
         //llamada a la función de eliminar producto
         eliminarProductoDelCarrito(producto.id);
@@ -97,19 +93,32 @@ function inicializarEventosCarrito(producto) {
 
 //funcion para actualizar el total del producto
 function actualizarTotalProducto(producto, cantidad) {
-    const total = producto.precio*cantidad;
+    const total = producto.precio * cantidad;
     //actualiza el texto del total
     document.querySelector(`#total${producto.id}`).textContent = total.toFixed(2);
 }
 
-//función para eliminar un producto del carrito
-function eliminarProductoDelCarrito(id) {
-    //encuentra el div del producto
-    const productoDiv = document.querySelector(`.articulo[data-id="${id}"]`);
-    //elimina el div del carrito
-    productoDiv.remove();
+//funcion para actualizar el carrito en localStorage después de cambiar la cantidad
+function actualizarCarrito(id, cantidad) {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const productoIndex = carrito.findIndex(producto => producto.id === id);
+
+    if (productoIndex > -1) {
+        carrito[productoIndex].cantidad = cantidad//actualizamos la cantidad
+        localStorage.setItem('carrito', JSON.stringify(carrito));//guardamos el carrito actualizado
+    }
 }
 
-//quedan los botones de agregar al carrito pero 
-// eso creo que deberia ponerlo en 
-//otro archivo 
+//función para eliminar un producto del carrito
+function eliminarProductoDelCarrito(id) {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    //filtramos el carrito para eliminar el producto
+    carrito = carrito.filter(producto => producto.id !== id);
+
+    //guardamos el carrito actualizado
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    cargarCarrito();
+}
+
+//llamamos a cargarCarrito para mostrar los productos al cargar la página del carrito
+cargarCarrito();

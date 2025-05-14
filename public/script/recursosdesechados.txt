@@ -1,0 +1,9 @@
+    if (productoSeleccionado) {
+        //Creamos la estructura HTML para el producto en el carrito
+        //nuevo div para el articulo
+        const articuloDiv = document.createElement('div');
+        //agregar la clase'articulo para los estilos
+        articuloDiv.classList.add('articulo');
+        //usamos data-id para identificar el producto
+        articuloDiv.setAttribute('data-id', productoSeleccionado.id);
+    } //if para creear el div lo guardo por si me es mas comodo
