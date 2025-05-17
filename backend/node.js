@@ -39,8 +39,16 @@ conexion.connect(err => {
 //Define una ruta que será llamada cuado el frontend quiera obtener los productos.
 //'/api/productos' es al URL donde el front end puede pedir los productos al backend.
 app.get('/api/productos', (req, res) => {
+
+    const categoria = req.query.categoria;
+    //crear constante de la consulta
+    const consultaOrdenada = `SELECT * FROM producto 
+    INNER JOIN producto_categoria ON producto_categoria.idProducto = producto.idProducto 
+    INNER JOIN categoria ON categoria.idCategoria = producto_categoria.idCategoria 
+    WHERE categoria.nombreCategoria = ?;
+    `;
     //Consulta a la base de datos para obtener todos los productos.
-    conexion.query('SELECT * FROM producto', (error, resultados) => {
+    conexion.query(consultaOrdenada, [categoria], (error, resultados) => {
         if(error) {
             //si ocurre un error en la consulta, responde con un error 500 y el mensajede error.
             res.status(500).json({ error: 'Error en la consulta'});

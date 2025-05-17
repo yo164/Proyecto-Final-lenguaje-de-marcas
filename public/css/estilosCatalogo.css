@@ -43,3 +43,12 @@ body {
     height: 450px;
     
 }
+
+.contenedorImg{
+    border-radius: 5px;
+}
+
+.imgProducto {
+    width: 120px;
+    height: 130px;
+}

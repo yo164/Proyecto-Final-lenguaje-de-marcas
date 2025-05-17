@@ -1,4 +1,5 @@
-const url = 'http://localhost:3000/api/productos';
+const categoria = 'Quillas';
+const url = `http://localhost:3000/api/productos?categoria=${encodeURIComponent(categoria)}`;
 
 fetch(url).then(response =>  {
     if(!response.ok) {
@@ -14,6 +15,9 @@ fetch(url).then(response =>  {
         //como falta la foto pondre lo basico en varios p y a volar
         item.innerHTML = `
         <h3>${producto.nombreProducto}</h3>
+        <div class="contenedorImg">
+            <img src="${producto.urlImagen}" alt="Foto de ${producto.nombreProducto}" class="imgProducto">
+        </div>
         <p>Precio: ${producto.precio}</p>
         <p>Descripción: ${producto.descripcion}</p>
         
