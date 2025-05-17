@@ -22,7 +22,7 @@ const conexion = mysql.createConnection({
     host:'localhost',
     user :'root',
     password: '',
-    database: 'TiendaOnline'
+    database: 'tiendaonline'
 });
 
 //Verifica si la conexión  a la base de datos fue exitosa.
