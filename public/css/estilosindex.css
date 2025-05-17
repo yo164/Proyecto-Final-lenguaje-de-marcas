@@ -14,19 +14,36 @@ header{
 header h1{
     color: bisque;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
 .logoTienda {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    border-radius: 5px;
-    background-color: aqua;
+    width: 150px;
+    height: 140px;
+    background-color: white;
+    
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+    
+}
+
+.logoTienda a{
+    margin: 0;
+    padding: 0;
+}
+.logoTienda img{
+    width: 150px;
+    
 }
 
 
 .index{
-    height: 100vh;
+    height: 73.9vh;
     display:flex;
     flex-direction: column;
 }
@@ -70,7 +87,7 @@ aside nav a:hover{
 }
 
 .principal{
-    background-color:burlywood ;
+    
     width: 80%;
     position: relative;
     height: 100%;
@@ -82,7 +99,7 @@ aside nav a:hover{
 }
 
 .intro{
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     position: relative;
     display: flex;
@@ -158,7 +175,7 @@ aside nav a:hover{
 .articulo{
     background-color: #f5f5f5;
     padding: 1rem;
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: center;
     border: 2px solid #38bd0f;
@@ -168,7 +185,9 @@ aside nav a:hover{
     overflow: hidden;
 }
 
-
+.desplegable{
+    
+}
 .bandaofertas{
     background-color: chocolate;
     width: 100%;
