@@ -20,10 +20,10 @@ links.forEach(link => {
                 submenu.innerHTML = `
         <h4>${link.textContent}</h4>
         <nav>
-        <a href="pagina con la categoria cargada">Skates Completos</a>
-        <a href="">Tablas</a>
-        <a href="">Ejes</a>
-        <a href="">Ruedas</a>
+        <a href="productos.html?categoria=Skates%20Completos">Skates Completos</a>
+        <a href="productos.html?categoria=Tablas">Tablas</a>
+        <a href="productos.html?categoria=Ejes">Ejes</a>
+        <a href="productos.html?categoria=Ruedas">Ruedas</a>
         </nav>
         `;
                 break;
@@ -31,10 +31,10 @@ links.forEach(link => {
                 submenu.innerHTML = `
             <h4>${link.textContent}</h4>
             <nav>
-            <a>Quillas</a>
-            <a>Fundas de Surf</a>
-            <a>Inventos</a>
-            <a>Parafina</a>
+            <a href="productos.html?categoria=Quillas">Quillas</a>
+            <a href="productos.html?categoria=Fundas%20de%20Surf">Fundas de Surf</a>
+            <a href="productos.html?categoria=Inventos">Inventos</a>
+            <a href="productos.html?categoria=Parafina">Parafina</a>
             </nav>
             `;
 
@@ -43,7 +43,7 @@ links.forEach(link => {
                 submenu.innerHTML = `
             <h4>${link.textContent}</h4>
             <nav>
-            <a>Ropa de Surf</a>
+            <a href="productos.html?categoria=Ropa%20de%20Surf">Ropa de Surf</a>
             
             </nav>
             `;
@@ -52,10 +52,10 @@ links.forEach(link => {
                 submenu.innerHTML = `
             <h4>${link.textContent}</h4>
             <nav>
-            <a>Protecciones</a>
-            <a>Accesorios de Surf</a>
-            <a>Accesorios de Skate</a>
-            <a>Bolsas y Mochilas</a>
+            <a href="productos.html?categoria=Protecciones">Protecciones</a>
+            <a href="productos.html?categoria=Accesorios%20de%20Surf">Accesorios de Surf</a>
+            <a href="productos.html?categoria=Accesorios%20de%20Surf">Accesorios de Skate</a>
+            <a href="productos.html?categoria=Bolsas%20y%20Mochilas">Bolsas y Mochilas</a>
             
             </nav>
             `;

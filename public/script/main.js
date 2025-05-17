@@ -1,4 +1,5 @@
-const categoria = 'Quillas';
+const params = new URLSearchParams(window.location.search);
+const categoria = params.get('categoria');
 const url = `http://localhost:3000/api/productos?categoria=${encodeURIComponent(categoria)}`;
 
 fetch(url).then(response =>  {
@@ -20,6 +21,7 @@ fetch(url).then(response =>  {
         </div>
         <p>Precio: ${producto.precio}</p>
         <p>Descripción: ${producto.descripcion}</p>
+        <p>Categoria: ${categoria}</p>
         
         `;
         contenedor.appendChild(item);
