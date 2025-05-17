@@ -31,7 +31,7 @@ links.forEach(link => {
 
     });
 
-    link.addEventListener('mouseleave', () => {
+    link.addEventListener('mouseleave', (event) => {
         console.log('desfocused', link.textContent);
         
         
