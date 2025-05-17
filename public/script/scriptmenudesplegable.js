@@ -48,7 +48,7 @@ links.forEach(link => {
             </nav>
             `;
                 break;
-            case 'Complementos y Accesorios':
+            case 'Accesorios':
                 submenu.innerHTML = `
             <h4>${link.textContent}</h4>
             <nav>
