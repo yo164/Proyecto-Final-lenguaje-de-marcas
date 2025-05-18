@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" href="/logotipoFranciscoCobo.svg" type="image/svg">
-    <link rel="stylesheet" href="/public/css/estilosFormulario.css">
+    <script src="/public/script/formularioRegistro.js" defer></script>
+    
 </head>
 <body>
     <header>
         añadir el header principal 
     </header>
     <main>
-        <form method="post">
+        <form id="formularioRegistro" method="post">
             <fieldset>
                 <legend>
                     Formulario de Registro
@@ -22,8 +23,8 @@
                 <label>Nombre: 
                     <input 
                     type="text" 
-                    id="name" 
-                    name="name"
+                    id="nombre" 
+                    name="nombre"
                     placeholder="Escribe aquí tu nombre"
                     required
                     >
@@ -52,7 +53,8 @@
                     id="telefono"
                     name="telefono"
                     placeholder="Escribe aquí tu número de teléfono"
-                    required pattern="[0-9]{9}"
+                    required 
+                    pattern="[0-9]{9}"
                     
                     >
                 </label>
@@ -62,10 +64,53 @@
                     id="mail"
                     name="mail"
                     placeholder="Escribe aquí tu número de teléfono"
-                    required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+                    required
+                    >
+                </label>
+                <br>
+                <label>Contraseña:
+                    <input type="text"
+                    id="contrasena"
+                    name="contrasena"
+                    placeholder="Escribe aquí tu contraseña Solo Mayusculas Minusculas y Números"
+                    required
+                    >
+                </label>
+                <br>
+                <label>Nombre de Usuario:
+                    <input type="text"
+                    id="nombreUsuario"
+                    name="nombreUsuario"
+                    placeholder="Escribe aquí tu nombre de Usuario"
+                    
                     >
                 </label>
                     <br>
+                       <label>Metodo de pago:
+                            <select name="metodoPago" id="metodoPago" required>
+                                <option 
+                                    value="1"
+                                >Tarjeta de Crédito
+                                </option>
+                                <option 
+                                    value="2"
+                                >PayPal
+                                </option>
+                                <option 
+                                    value="3"
+                                >Transferencia bancaria
+                                </option>
+                                <option 
+                                    value="4"
+                                >Contrareembolso
+                                </option>
+                                <option 
+                                    value="5"
+                                >Bitcoin
+                                </option>
+                            </select>
+                        </label>
+                        <br>
                     <fieldset id="direccion">
                         <legend>Dirección:
 
@@ -109,11 +154,20 @@
                             >
                         </label>
                         
-                        <label>Número de escalera:
+                        <label>Número:
                             <input 
                             type="text" 
-                            id="numeroEscalera" 
-                            name="numeroEscalera" 
+                            id="numero" 
+                            name="numero" 
+                            placeholder="Escriba el número de la escalera"
+                            required
+                            >
+                        </label>
+                        <label>Escalera:
+                            <input 
+                            type="text" 
+                            id="escalera" 
+                            name="escalera" 
                             placeholder="Escriba el número de la escalera"
                             required
                             >
@@ -127,16 +181,16 @@
                             <input type="text" id="puerta" name="puerta" placeholder="Escriba la puerta" required>
                         </label>
                         
-                        <label>Población:
-                            <input type="text" id="poblacion" name="poblacion" placeholder="Escriba la población" required>
-                        </label>
-                        
-                        <label>Provincia:
-                            <input type="text" id="provincia" name="provincia" placeholder="Escriba la provincia"required>
-                        </label>
+                   
                         
                         <label>Código Postal:
                             <input type="text" id="codigoPostal" name="codigoPostal" placeholder="Escriba el código postal" required>
+                        </label>
+                        <label>Población:
+                            <input type="text" id="poblacion" name="poblacion" placeholder="Escribe tu población" required>
+                        </label>
+                        <label>Provincia:
+                            <input type="text" id="provincia" name="provincia" placeholder="Escriba la provincia" required>
                         </label>
                         
                     </fieldset>
