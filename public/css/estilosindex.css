@@ -1,46 +1,5 @@
 
 
-header{
-    background-color: black;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-header h1{
-    color: bisque;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 5px;
-    margin-bottom: 15px;
-}
-
-.logoTienda {
-    width: 150px;
-    height: 140px;
-    background-color: white;
-    
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    
-    
-}
-
-.logoTienda a{
-    margin: 0;
-    padding: 0;
-}
-.logoTienda img{
-    width: 150px;
-    
-}
-
 
 .index{
     height: 73.9vh;
@@ -166,7 +125,7 @@ aside nav a:hover{
     padding-top:50px;
     font-size: 30px;
 }
-.productos{
+.productosmasvendidos{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -189,7 +148,7 @@ aside nav a:hover{
 
 
 .bandaofertas{
-    background-color: chocolate;
+
     width: 100%;
     height: 33.3%;
     position: relative;
@@ -200,7 +159,7 @@ aside nav a:hover{
     justify-content: center;
 }
 
-.bandaofertas div {
+.producto {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -208,17 +167,41 @@ aside nav a:hover{
     top: 0;
     left: 0;
     opacity: 0;
-    animation: fadeCarousel 12s infinite;
-    transition: opacity 1s ease-in-out;
+    animation-name: fadeCarousel; 
+    animation-duration: 80s;
+    animation-iteration-count:  infinite;/*se aplica a todos lso divs dentro de banda ofertas(no solo a los que son hijos directos)*/
+    /*transition: opacity 1s ease-in-out;*/
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    pointer-events: auto;
+    background-color: white;
+    
 }
-.bandaofertas div:nth-child(1) { animation-delay: 0s; background-color: black;}
-.bandaofertas div:nth-child(2) { animation-delay: 4s; background-color: white}
-.bandaofertas div:nth-child(3) { animation-delay: 8s; background-color: pink}
+
+
 @keyframes fadeCarousel {
-        0%, 100% { opacity: 0; }
-        10%, 30% { opacity: 1; }
-        40%, 90% { opacity: 0; }
+  0%, 8% { opacity: 0; visibility: hidden;}
+  10%, 30% { opacity: 1; visibility: visible; }
+  32%, 100% { opacity: 0; visibility: hidden;}
+}
+
+.contenedorImg{
+    border-radius: 5px;
+    width: 30%;
+    height: 80%;
+
+
+}
+
+.contenedorImg img{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 .desplegable{
@@ -262,16 +245,17 @@ aside nav a:hover{
     color: aqua;
 }
 
-
-
-
-
-
-footer {
-    font-family: monospace;
-    padding: 10px;
-    text-align: center;
+.botonsubmitOferta {
+    padding: 20px;
     background-color: black;
-    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    color:white;
+    font-size: 20px;
+
 }
+
+
+
+
+
 

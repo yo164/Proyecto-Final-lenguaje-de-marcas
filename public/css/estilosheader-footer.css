@@ -1,0 +1,51 @@
+
+/*HEADER*/
+header{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header h1{
+    color: bisque;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.logoTienda {
+    width: 150px;
+    height: 140px;
+    background-color: white;
+    
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+    
+}
+
+.logoTienda a{
+    margin: 0;
+    padding: 0;
+}
+.logoTienda img{
+    width: 150px;
+    
+}
+
+/*FOOTER*/
+footer {
+    font-family: monospace;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
