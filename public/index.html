@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Surf&Skate Tienda Online</title>
     <link rel="stylesheet" href="/public/css/estilosindex.css">
     <link rel="stylesheet" href="/public/css/estilosheader-footer.css">
-    
+    <link rel="stylesheet" href="/public/css/estilosmodal.css">
     <script src="/public/script/scriptmenudesplegable.js" defer></script>
     <script src="/public/script/ofertasCarrusel.js" defer></script>
-
-      <link rel="icon" href="/logotipoFranciscoCobo.svg" type="image/svg">
+    <script src="/public/script/modalInicioSesion.js" defer></script>
+    <link rel="icon" href="/logotipoFranciscoCobo.svg" type="image/svg">
 
 
 </head>
@@ -21,6 +21,41 @@
         <h1>Tienda online</h1>
         <div class="logoTienda">
             <a href="index.html"><img src="/logotipoFranciscoCobo.svg" alt="Logotipo de la tienda"></a>
+        </div>
+        <div class="login" id="login">
+
+            <dialog id="modal">
+                <h4>Inicio de sesión</h4>
+                <div>
+                    <label>Nombre de Usuario:
+                        <input type="text" id="nombreUsuario" name="nombreUsuario"
+                            placeholder="Escribe aquí tu nombre de usuario" required>
+                    </label>
+                    <br>
+                    <label>Contraseña:
+                        <input type="text" id="contrasena" name="contrasena" placeholder="Escribe aquí tu contrasena"
+                            required>
+                    </label>
+                    <br>
+                    <div class="botonesmodal">
+                        <button id="cerrar">Cerrar</button>
+
+                        <button type="submit" id="iniciarSesion">Iniciar Sesión</button>
+
+                    </div>
+
+                </div>
+
+            </dialog>
+            <button id="abrir">
+                Iniciar Sesión
+            </button>
+
+            <button><a href="formularioRegistro.html">
+                    Registrarse
+
+                </a>
+            </button>
         </div>
     </header>
     <main class="index">
@@ -34,6 +69,9 @@
                     <a href="" class="enlaces">Ropa</a>
                     <a href="" class="enlaces">Accesorios</a>
                 </nav>
+                <dialog id="modal2">
+
+                </dialog>
             </aside>
             <section class="principal" id="principal">
 
@@ -83,7 +121,7 @@
              <img src="/1721769769904.jpeg" alt="foto3">
             -->
 
-        
+
         </section><!--1-->
     </main>
     <footer>
