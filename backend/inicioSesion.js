@@ -10,6 +10,8 @@ const app = express();
 
 const port = 3002;
 
+const util = require('util');
+
 app.use(cors({}));
 app.use(express.json());
 
@@ -40,12 +42,12 @@ app.post('/api/login', async (req, res) => {
     }
 
     try {
-        const nombredeUsuario = req.query.nombreUsuario;
+        
         const consulta = `
         SELECT * FROM cliente
         WHERE nombreUsuario = ?;
         `
-        const resultado = await query (consulta, [nombredeUsuario]);
+        const resultado = await query (consulta, [nombreUsuario]);
 
         if (resultado.length === 0) {
             return res.status(404).json({ mensaje: 'El usuario no existe'});

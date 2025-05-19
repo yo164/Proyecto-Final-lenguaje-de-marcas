@@ -27,5 +27,5 @@ fetch(url).then(response =>  {
         contenedor.appendChild(item);
     });
 }).catch(error => {
-    console.error('Huboun error:', error);
+    console.error('Hubo un error:', error);
 });

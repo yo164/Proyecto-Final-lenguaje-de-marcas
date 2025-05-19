@@ -1,11 +1,11 @@
 
 //modal y boton
-const modal = document.getElementById('modal');
-const btnIniciarSesion = document.getElementById.apply('IniciarSesion');
+const modal2 = document.getElementById('modal');
+const btnIniciarSesion = document.getElementById('iniciarSesion');
 
 //inputs
 const inputNombreUsuario = document.getElementById('nombreUsuario');
-const inputContrasena = document.getElementById.apply('contrasena');
+const inputContrasena = document.getElementById('contrasena');
 
 
 //abrir mensaje de inicio de sesion
@@ -14,7 +14,7 @@ if (!mensajeEl) {
     mensajeEl = document.createElement('p');
     mensajeEl.id = 'mensajeLogin';
     mensajeEl.style.marginTop = '10px';
-    modal.appendChild(mensajeEl);
+    modal2.appendChild(mensajeEl);
 }
 
 //validaciond e campos vacios (yalo hace el required pero mas mejor)
@@ -73,17 +73,9 @@ btnIniciarSesion.addEventListener('click', async () => {
     }
 
     setTimeout(() => {
-        modal.close();
+        modal2.close();
     }, 1000);
 });
 
 //front end de iniciode sesion
 
-fetch('http://localhost:3002/api/login', {
-    method: 'POST',
-    headers:{ 'Content-Type': 'application/json'},
-    body: JSON.stringify({nombreUsuario: 'soypaco', contrasena:'1234'})
-})
-.then(res => res.json())
-.then(data => console.log(data))
-.catch(err => console.error(err));
