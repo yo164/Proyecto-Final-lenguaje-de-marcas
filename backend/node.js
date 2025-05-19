@@ -34,7 +34,7 @@ conexion.connect(err => {
     }
     //si la conexion es exitosa, muestra un mensaje.
     console.log('Conectado a la base de datos');
-})
+});
 
 //Define una ruta que será llamada cuado el frontend quiera obtener los productos.
 //'/api/productos' es al URL donde el front end puede pedir los productos al backend.
