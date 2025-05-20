@@ -11,7 +11,7 @@ body {
 }
 
 .catalogo{
-    background-color: aquamarine;
+    background-color: white;
     padding-top: 36px;
     text-align: center;
    height: auto;
@@ -36,19 +36,46 @@ body {
 }
 
 .contenedorProducto {
-    background-color: blueviolet;
+    background-color: whitesmoke;
     box-sizing: border-box;
-    box-shadow: 3px 5px 20px 4px rgba(0, 0, 0, 0.85);
+    box-shadow: 6px 8px 10px 2px rgba(0, 0, 0, 0.85);
     border-radius: 3px;
     height: 450px;
-    
+    padding-inline: 10px;
 }
 
+
+.info{
+    height: 25%;
+    overflow-y: scroll;
+}
 .contenedorImg{
     border-radius: 5px;
 }
 
 .imgProducto {
-    width: 120px;
-    height: 130px;
+    width: 180px;
+    height: 170px;
+}
+
+
+    
+.formCarrito{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.inputAna {
+    text-align: center;
+    margin: 5px;
+    font-size: 18px;
+}
+
+.botonAnaCa {
+    padding: 10px;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    color:white;
+    font-size: 16px;
+    margin: 5px;
 }

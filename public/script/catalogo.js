@@ -19,9 +19,19 @@ fetch(url).then(response =>  {
         <div class="contenedorImg">
             <img src="${producto.urlImagen}" alt="Foto de ${producto.nombreProducto}" class="imgProducto">
         </div>
-        <p>Precio: ${producto.precio}</p>
+        <div class="info">
+        <p>Precio: <strong>${producto.precio} €</strong></p>
         <p>Descripción: ${producto.descripcion}</p>
-        <p>Categoria: ${categoria}</p>
+        
+        </div>
+        
+            <form method="post" class="formCarrito">
+            <input type="number" min="1" value="1" max="${producto.stock}" class="inputAna">
+            <button type="submit" class="botonAnaCa">
+            Añadir al carrito
+            </button>
+            </form>
+        
         
         `;
         contenedor.appendChild(item);
