@@ -1,7 +1,7 @@
 .menuPrueba {
     background-color: rgba(255, 255, 255, 0.6);
-    top: 30vh;
-    left: 12vw;
+    top: 28vh;
+    left: 13vw;
     z-index: 10;
     border:none;
     border-radius: 5px;
@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 50vh;
+    height: 40vh;
     width: 70vw;
 }
 
@@ -35,11 +35,14 @@
 .contNav nav {
     display: flex;
     justify-content: space-evenly;
-    border-radius: 3px;
+    
 }
 
-.menuPrueba nav a {
+.contNav nav a {
     padding: 20px;
     font-size: 25px;
     text-decoration: none;
+    border:none;
 }
+
+

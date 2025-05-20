@@ -4,9 +4,9 @@ const cerrar = document.getElementById('cerrar');
 
 
 abrir.addEventListener('click', () => {
-    modal2.show();
+    modal.show();
 });
 
 cerrar.addEventListener('click', () => {
-    modal2.close();
+    modal.close();
 });
