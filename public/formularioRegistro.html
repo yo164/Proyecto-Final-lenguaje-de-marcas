@@ -1,211 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" href="/logotipoFranciscoCobo.svg" type="image/svg">
+    <link rel="stylesheet" href="/public/css/estilosFormulario.css">
     <script src="/public/script/formularioRegistro.js" defer></script>
-    
+
 </head>
+
 <body>
-    <header>
-        añadir el header principal 
-    </header>
     <main>
+        <h1>Formulario de registro</h1>
         <form id="formularioRegistro" method="post">
             <fieldset>
                 <legend>
-                    Formulario de Registro
-    
+                    Datos de usuario
+
                 </legend>
 
-                <label>Nombre: 
-                    <input 
-                    type="text" 
-                    id="nombre" 
-                    name="nombre"
-                    placeholder="Escribe aquí tu nombre"
-                    required
-                    >
+                <label>Nombre: *
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe aquí tu nombre" required>
                 </label>
                 <br>
-                <label>Primer apellido:
-                    <input type="text"
-                    id="apellido1"
-                    name="apellido1"
-                    placeholder="Escribe aquí tu primer apellido"
-                    required
-                    >
+                <label>Primer apellido: *
+                    <input type="text" id="apellido1" name="apellido1" placeholder="Escribe aquí tu primer apellido"
+                        required>
                 </label>
                 <br>
-                <label>Segundo apellido:
-                    <input type="text"
-                    id="apelido2"
-                    name="apellido2"
-                    placeholder="Escribe aquí tu segundo apellido"
-                    required
-                    >
+                <label>Segundo apellido: *
+                    <input type="text" id="apelido2" name="apellido2" placeholder="Escribe aquí tu segundo apellido"
+                        required>
                 </label>
                 <br>
-                <label>Teléfono:
-                    <input type="tel"
-                    id="telefono"
-                    name="telefono"
-                    placeholder="Escribe aquí tu número de teléfono"
-                    required 
-                    pattern="[0-9]{9}"
-                    
-                    >
+                <label>Teléfono: *
+                    <input type="tel" id="telefono" name="telefono" placeholder="Escribe aquí tu número de teléfono"
+                        required pattern="[0-9]{9}">
                 </label>
                 <br>
-                <label>Email:
-                    <input type="email"
-                    id="mail"
-                    name="mail"
-                    placeholder="Escribe aquí tu número de teléfono"
-                    required
-                    >
+                <label>Email: *
+                    <input type="email" id="mail" name="mail" placeholder="Escribe aquí tu número de teléfono" required>
                 </label>
                 <br>
-                <label>Contraseña:
-                    <input type="text"
-                    id="contrasena"
-                    name="contrasena"
-                    placeholder="Escribe aquí tu contraseña Solo Mayusculas Minusculas y Números"
-                    required
-                    >
+                <label>Contraseña: *
+                    <input type="text" id="contrasena" name="contrasena"
+                        placeholder="6CARACTERES, AL MENOS 1MAYUS, 1MINUS, 1NUM" required
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$">
                 </label>
                 <br>
-                <label>Nombre de Usuario:
-                    <input type="text"
-                    id="nombreUsuario"
-                    name="nombreUsuario"
-                    placeholder="Escribe aquí tu nombre de Usuario"
-                    
-                    >
+                <label>Nombre de Usuario: *
+                    <input type="text" id="nombreUsuario" name="nombreUsuario"
+                        placeholder="Escribe aquí tu nombre de Usuario">
                 </label>
-                    <br>
-                       <label>Metodo de pago:
-                            <select name="metodoPago" id="metodoPago" required>
-                                <option 
-                                    value="1"
-                                >Tarjeta de Crédito
-                                </option>
-                                <option 
-                                    value="2"
-                                >PayPal
-                                </option>
-                                <option 
-                                    value="3"
-                                >Transferencia bancaria
-                                </option>
-                                <option 
-                                    value="4"
-                                >Contrareembolso
-                                </option>
-                                <option 
-                                    value="5"
-                                >Bitcoin
-                                </option>
-                            </select>
-                        </label>
-                        <br>
-                    <fieldset id="direccion">
-                        <legend>Dirección:
+                <br>
+                <label>Metodo de pago: *
+                    <select name="metodoPago" id="metodoPago" required>
+                        <option value="1">Tarjeta de Crédito
+                        </option>
+                        <option value="2">PayPal
+                        </option>
+                        <option value="3">Transferencia bancaria
+                        </option>
+                        <option value="4">Contrareembolso
+                        </option>
+                        <option value="5">Bitcoin
+                        </option>
+                    </select>
+                </label>
+                <br>
+                <fieldset id="direccion">
+                    <legend>Dirección:
 
-                        </legend>
-                        <br>
-                        <label>Tipo de Via:
-                            <select name="tipoVia" id="tipoVia" required>
-                                <option 
-                                    value="Calle"
-                                >Calle
-                                </option>
-                                <option 
-                                    value="Avenida"
-                                >Avenida
-                                </option>
-                                <option 
-                                    value="Plaza"
-                                >Plaza
-                                </option>
-                                <option 
-                                    value="Boulevard"
-                                >Boulevard
-                                </option>
-                                <option 
-                                    value="Placeta"
-                                >Placeta
-                                </option>
-                                <option     
-                                    value="Paseo"
-                                >Paseo
-                                </option>
-                                <option 
-                                    value="Camino"
-                                >Camino
-                                </option>
-                            </select>
-                        </label>
-                        <br>
-                        <label>Nombre de la vía:
-                            <input type="text" id="nombreVia" name="nombreVia" placeholder="Escriba aquí el nombre de la vía" required
-                            >
-                        </label>
-                        
-                        <label>Número:
-                            <input 
-                            type="text" 
-                            id="numero" 
-                            name="numero" 
-                            placeholder="Escriba el número de la escalera"
-                            required
-                            >
-                        </label>
-                        <label>Escalera:
-                            <input 
-                            type="text" 
-                            id="escalera" 
-                            name="escalera" 
-                            placeholder="Escriba el número de la escalera"
-                            required
-                            >
-                        </label>
-                        
-                        <label>Piso:
-                            <input type="text" id="piso" name="piso" placeholder="Escriba el piso" required>
-                        </label>
-                        
-                        <label>Puerta:
-                            <input type="text" id="puerta" name="puerta" placeholder="Escriba la puerta" required>
-                        </label>
-                        
-                   
-                        
-                        <label>Código Postal:
-                            <input type="text" id="codigoPostal" name="codigoPostal" placeholder="Escriba el código postal" required>
-                        </label>
-                        <label>Población:
-                            <input type="text" id="poblacion" name="poblacion" placeholder="Escribe tu población" required>
-                        </label>
-                        <label>Provincia:
-                            <input type="text" id="provincia" name="provincia" placeholder="Escriba la provincia" required>
-                        </label>
-                        
-                    </fieldset>
-                    <p><Strong>* Campo obligatorio</Strong></p>
-                
+                    </legend>
+                    <br>
+                    <label>Tipo de Via: *
+                        <select name="tipoVia" id="tipoVia" required>
+                            <option value="Calle">Calle
+                            </option>
+                            <option value="Avenida">Avenida
+                            </option>
+                            <option value="Plaza">Plaza
+                            </option>
+                            <option value="Boulevard">Boulevard
+                            </option>
+                            <option value="Placeta">Placeta
+                            </option>
+                            <option value="Paseo">Paseo
+                            </option>
+                            <option value="Camino">Camino
+                            </option>
+                        </select>
+                    </label>
+                    <br>
+                    <label>Nombre de la vía: *
+                        <input type="text" id="nombreVia" name="nombreVia"
+                            placeholder="Escriba aquí el nombre de la vía" required>
+                    </label>
+
+                    <label>Número: *
+                        <input type="text" id="numero" name="numero" placeholder="Escriba el número de la escalera"
+                            required>
+                    </label>
+                    <label>Escalera: *
+                        <input type="text" id="escalera" name="escalera" placeholder="Escriba el número de la escalera"
+                            required>
+                    </label>
+
+                    <label>Piso: *
+                        <input type="text" id="piso" name="piso" placeholder="Escriba el piso" required>
+                    </label>
+
+                    <label>Puerta: *
+                        <input type="text" id="puerta" name="puerta" placeholder="Escriba la puerta" required>
+                    </label>
+
+
+
+                    <label>Código Postal: *
+                        <input type="text" id="codigoPostal" name="codigoPostal" placeholder="Escriba el código postal"
+                            required>
+                    </label>
+                    <label>Población: *
+                        <input type="text" id="poblacion" name="poblacion" placeholder="Escribe tu población" required>
+                    </label>
+                    <label>Provincia: *
+                        <input type="text" id="provincia" name="provincia" placeholder="Escriba la provincia" required>
+                    </label>
+
+                </fieldset>
+                <p><Strong>* Campo obligatorio</Strong></p>
 
             </fieldset>
-            <button type="submit"><p>Submit</p></button>
-            
-         
+            <div>
+                <button type="submit">Registrarse</button>
+                <button type="button"><a href="index.html">Atrás</a>
+
+            </div>
+
+
+
         </form>
+        </button>
     </main>
-    
+
 
 
 
 </body>
+
 </html>
