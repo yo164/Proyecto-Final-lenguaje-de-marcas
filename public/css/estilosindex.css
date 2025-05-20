@@ -195,14 +195,16 @@ aside nav a:hover{
     border-radius: 5px;
     width: 30%;
     height: 80%;
-
+display: flex;
+    justify-content: center;
 
 }
 
 .contenedorImg img{
     overflow: hidden;
-    width: 100%;
+    width: auto;
     height: 100%;
+    
 }
 
 .desplegable{

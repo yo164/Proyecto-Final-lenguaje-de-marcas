@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </div>
                 <div class="contenedorContenido">
                     <h3>${producto.nombreProducto}</h3>
-                    <p>Precio: ${producto.precio}</p>
+                    <p>Precio Rebajado: <strong>${producto.precio} €</strong></p>
+                    <p>Precio:<strong> ${(parseFloat(producto.precio)+10).toFixed(2)} €</strong></p>
                     <p>Descripción: ${producto.descripcion}</p>
                 </div>
                 <div class="contenedorBotones">
