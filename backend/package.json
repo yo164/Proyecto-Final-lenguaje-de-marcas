@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"node server.js\" \"node nodeFormulario.js\" \"node inicioSesion.js\""
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "mysql2": "^3.14.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
   }
 }

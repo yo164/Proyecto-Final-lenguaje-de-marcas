@@ -16,8 +16,8 @@
 }
 
 aside{
-    
-    
+    height: 100%;
+    background: repeating-radial-gradient(ellipse farthest-corner at right top, black 0px, rgb(78, 78, 78) 10px, grey 100px, white 160px);
     width:20%;
     display: flex;
     align-items: center;
@@ -28,9 +28,12 @@ aside{
 aside nav{
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 1em;
     padding-block: 2em;
-    background-color: rgba(159, 143, 189, 0.6);
+    background-color: rgba(212, 212, 212, 0.6);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    max-height: 90%;
     
 }
 
@@ -45,7 +48,7 @@ aside nav a{
 }
 
 aside nav a:hover{
-    color: cadetblue;
+    color: #c2c1c1;
 }
 
 .principal{
